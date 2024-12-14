@@ -25,12 +25,12 @@ export default function KaizenIsshinryuLanding() {
           >
             About
           </Link>
-          <Link
+          {/* <Link
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#classes"
           >
             Classes
-          </Link>
+          </Link> */}
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#locations"
@@ -53,13 +53,13 @@ export default function KaizenIsshinryuLanding() {
               "url('/hero-section.jpeg') no-repeat center center / cover",
           }}
         >
-          <div className="z-1 container px-4 md:px-6">
-            <div className="p-6 rounded-2xl flex flex-col items-center space-y-4 text-center bg-white/40">
+          <div className="z-1 container px-4 md:px-6 mx-auto">
+            <div className="p-6 rounded-2xl flex flex-col items-center space-y-4 text-center bg-white/60">
               <div className="space-y-2">
                 <h1 className="text-red-700 text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none">
                   Forge Your Spirit with Kaizen Isshinryu
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl/relaxed lg:text-2xl/relaxed">
+                <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl/relaxed lg:text-2xl/relaxed">
                   Embark on a journey of continuous improvement through the
                   ancient art of Isshinryu Karate.
                 </p>
@@ -67,16 +67,21 @@ export default function KaizenIsshinryuLanding() {
               <div className="space-x-4">
                 <Button
                   size="lg"
+                  asChild
                   className="bg-red-600 text-white hover:bg-red-700"
                 >
-                  Start Your Journey
+                  <Link href="https://wa.me/919092045678">
+                    Start Your Journey
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="border-white hover:bg-white hover:text-black"
                 >
-                  Learn More
+                  <Link href="#about" scroll={true}>
+                    Learn More
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -87,8 +92,8 @@ export default function KaizenIsshinryuLanding() {
           id="about"
           className="w-full py-12 md:py-24 lg:py-32 flex flex-col"
         >
-          <div className="flex-1 container px-4 md:px-6 flex flex-col items-stretch">
-            <div className="self-center flex gap-4 items-center">
+          <div className="flex-1 container px-4 md:px-6 flex flex-col items-center mx-auto">
+            <div className="self-center flex gap-4 items-center mb-8">
               <Image
                 src="/kaizen-logo.png?height=150&width=300"
                 width={150}
@@ -96,11 +101,11 @@ export default function KaizenIsshinryuLanding() {
                 alt="Isshinryu Karate Demonstration"
                 className="rounded-lg object-cover"
               />
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center">
                 About Kaizen Isshinryu
               </h2>
             </div>
-            <div className="grid gap-6 lg:grid-cols-2 items-center">
+            <div className="flex flex-col lg:flex-row gap-8 items-center">
               <div className="space-y-4">
                 <p className="text-gray-700 md:text-lg/relaxed lg:text-xl/relaxed">
                   Isshinryu Karate, founded by Tatsuo Shimabuku in 1954, is a
@@ -119,18 +124,18 @@ export default function KaizenIsshinryuLanding() {
                 width={400}
                 height={400}
                 alt="Isshinryu Karate Demonstration"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover self-center"
               />
             </div>
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-          <div className="container px-4 md:px-6">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 flex flex-col">
+          <div className="flex-1 container px-4 md:px-6 flex flex-col items-center mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               Meet Our Founder
             </h2>
-            <div className="grid gap-6 lg:grid-cols-2 items-center">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
               <Image
                 src="/founder.png?height=400&width=400"
                 width={400}
@@ -154,14 +159,17 @@ export default function KaizenIsshinryuLanding() {
           </div>
         </section>
 
-        <section id="locations" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+        <section
+          id="locations"
+          className="w-full py-12 md:py-24 lg:py-32 flex flex-col"
+        >
+          <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               Our Locations
             </h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
               <Link href={"https://maps.app.goo.gl/GWvxspAZAop73guu9"}>
-                <Card>
+                <Card className="hover:shadow-lg h-full">
                   <CardHeader>
                     <CardTitle>Mahalakshmi Flats</CardTitle>
                   </CardHeader>
@@ -174,7 +182,7 @@ export default function KaizenIsshinryuLanding() {
                 </Card>
               </Link>
               <Link href={"https://maps.app.goo.gl/v1stfPcr4zW9Mqgj8"}>
-                <Card>
+                <Card className="hover:shadow-lg h-full">
                   <CardHeader>
                     <CardTitle>Natesan Nagar</CardTitle>
                   </CardHeader>
@@ -188,7 +196,7 @@ export default function KaizenIsshinryuLanding() {
                 </Card>
               </Link>
               <Link href={"https://maps.app.goo.gl/u9xXvji35gBdpBQr8"}>
-                <Card>
+                <Card className="hover:shadow-lg h-full">
                   <CardHeader>
                     <CardTitle>MAK School Campus</CardTitle>
                   </CardHeader>
@@ -201,7 +209,7 @@ export default function KaizenIsshinryuLanding() {
                 </Card>
               </Link>
               <Link href={"https://maps.app.goo.gl/Ua5eysUBoEymoktaA"}>
-                <Card>
+                <Card className="hover:shadow-lg h-full">
                   <CardHeader>
                     <CardTitle>MAK School Campus - Jafferkhanpet</CardTitle>
                   </CardHeader>
@@ -217,7 +225,7 @@ export default function KaizenIsshinryuLanding() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-black text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-black/80 text-white flex flex-col items-center">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -245,7 +253,7 @@ export default function KaizenIsshinryuLanding() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               Follow Us on Instagram
@@ -272,7 +280,7 @@ export default function KaizenIsshinryuLanding() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <footer id="contact" className="w-full py-6 bg-red-700 text-white">
         <div className="container px-4 md:px-6">
