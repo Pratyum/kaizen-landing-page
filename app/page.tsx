@@ -143,17 +143,25 @@ export default function KaizenIsshinryuLanding() {
                 alt="Founder of Kaizen Isshinryu"
                 className="rounded-full mx-auto lg:mx-0"
               />
-              <div className="space-y-4">
+              <div className="space-y-4 flex flex-col gap-2">
                 <h3 className="text-2xl font-bold">Sensei Haranadh</h3>
+                <h4 className="text-xl font-semibold">Founder and Chief Instructor, Kaizen Isshinryu</h4>
                 <p className="text-gray-700 md:text-lg/relaxed">
-                  With over 30 years of experience in Isshinryu Karate, Sensei
-                  Haranadh founded Kaizen Isshinryu with a vision to spread the
-                  arts philosophy of continuous improvement.
+                Highly respected martial artist and instructor, Sensei Haranadh has dedicated his life to mastering the art of Isshinryu Karate. With a passion for sharing his knowledge, he founded Kaizen Isshinryu to spread the philosophy of continuous improvement.
                 </p>
+                <h4 className="text-xl font-semibold">
+                  Vision
+                </h4>
                 <p className="text-gray-700 md:text-lg/relaxed">
-                  His dedication to the craft and his students has made Kaizen
-                  Isshinryu a beacon of excellence in martial arts training.
+                To empower students through martial arts training, fostering a culture of continuous improvement and excellence.
                 </p>
+                <h4 className="text-xl font-semibold">Achievements</h4>
+                <ul className="list-disc list-inside text-gray-700 md:text-lg/relaxed">
+                  <li>Founder of Kaizen Isshinryu</li>
+                  <li>Over 18 years of experience in Isshinryu Karate</li>
+                  <li>Dedicated instructor with a proven track record of producing skilled and confident students</li>
+                  <li>Successfully established 16 branches of Kaizen Isshinryu</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -167,6 +175,9 @@ export default function KaizenIsshinryuLanding() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
               Our Locations
             </h2>
+            <h4 className="text-gray-700 text-center mb-8 md:text-lg/relaxed">
+            Kaizen Isshinryu has 16 branches, providing accessible and high-quality martial arts and fitness training to communities across the region.
+            </h4>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-4">
               <Link href={"https://maps.app.goo.gl/GWvxspAZAop73guu9"}>
                 <Card className="hover:shadow-lg h-full">
